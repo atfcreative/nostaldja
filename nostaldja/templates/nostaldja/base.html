@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Nostal-Dja</title>
+        <link rel="stylesheet" href="{% static 'css/nostaldja.css' %}">
+    </head>
+    <body>
+        <h1>Nostal-Dja &#x1F354</h1>
+        <nav>
+            <a href="/">Decades</a>
+            <a href="/fads/">Fads</a>
+            <a href="/decades/new">New Decade</a>
+            <a href="/fads/new">New Fads</a>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

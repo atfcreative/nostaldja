@@ -1,0 +1,16 @@
+{% extends 'nostaldja/base.html' %}
+
+{% block content %}
+
+    {% for decade in decades %}
+
+        <div class="decade">
+            <h1>
+                <a href="/decades/{{decade.id}}">{{decade.start_year}}</a>
+            </h1>
+        </div>
+
+
+    {% endfor %}
+
+{% endblock %}

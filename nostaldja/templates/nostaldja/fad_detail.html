@@ -1,0 +1,20 @@
+{% extends 'nostaldja/base.html' %}
+
+{% block content %}
+
+    <div class="fad">
+       <h2>
+            <a href="/decades/{{fad.decade.id}}"> {{fad.decade.start_year}} </a>
+        </h2>
+        <img src="{{fad.image_url}}" alt="Photo of {{fad.name}}" />
+        <p>{{fad.name}} </p>
+        <p>{{fad.description}} </p>
+        <a href="/fads/{{fad.id}}/edit"> Edit {{fad.name}} </a>
+
+        <form action="/fads/{{fad.id}}/delete" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Delete {{fad.name}}">
+        </form>
+    </div>
+
+{% endblock %}
